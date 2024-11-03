@@ -1,16 +1,16 @@
-# MicroServo Datasets
+# AIOpsArena Datasets
 
-MicroServo Datasets, are overall datasets for analyzing operation problems such as anomaly detection, failure classification, root cause analysis, etc.
+AIOpsArena Datasets, are overall datasets for analyzing operation problems such as anomaly detection, failure classification, root cause analysis, etc.
 
 The "complex" folder contains datasets for a variety of operation scenarios.
 
 The "single" folder contains datasets for a single type of operation scenario.
 
 ## Quick Start
-The MicroServo datasets consists of three days of data collected from the MicroServo platform. The fault scenarios include Pod failure, CPU and Memory stress, and faults related to network and HTTP types. It also provides the ground truth of fault injection.
+The AIOpsArena datasets consists of three days of data collected from the AIOpsArena platform. The fault scenarios include Pod failure, CPU and Memory stress, and faults related to network and HTTP types. It also provides the ground truth of fault injection.
 
 ### Metric
-MicroServo includes 15 container-level metrics and 10 service-level metrics, each stored in separate CSV files. The format for these files is as follows: (timestamp, cmdb_id, kpi_name, value), where each line represents a value sampled from all instances of a service. The sampling frequency is set at 60 second.
+AIOpsArena includes 15 container-level metrics and 10 service-level metrics, each stored in separate CSV files. The format for these files is as follows: (timestamp, cmdb_id, kpi_name, value), where each line represents a value sampled from all instances of a service. The sampling frequency is set at 60 second.
 
 | timestamp   | cmdb_id   | kpi_name   | value   |
 | ----------- | -------   | -------   | -------   |
@@ -22,7 +22,7 @@ MicroServo includes 15 container-level metrics and 10 service-level metrics, eac
 - value: value of metric at the timestamp
 
 ### Trace
-The traces in MicroServo is stored in a CSV format, capturing the intricate web of service requests. The CSV file is meticulously structured with columns that consist of: (timestamp, cmdb_id, span_id, trace_id, duration, type,
+The traces in AIOpsArena is stored in a CSV format, capturing the intricate web of service requests. The CSV file is meticulously structured with columns that consist of: (timestamp, cmdb_id, span_id, trace_id, duration, type,
 status_code, operation_name, parent_span).
 
 | timestamp   | cmdb_id   | span_id   | trace_id   | duration   | type   | status_code   | operation_name   | parent_span   |
@@ -40,7 +40,7 @@ status_code, operation_name, parent_span).
 - parent_span: ID of the preceding request in the call hierarchy
 
 ### Log
-The logs within MicroServo are preserved in a CSV file. Each row in the CSV file corresponds to an individual log entry, representing a singular event or state captured by the microservice’s logging system. And the format of the CSV file is composed of the following columns: (log_id, timestamp, date, cmdb_id, value). 
+The logs within AIOpsArena are preserved in a CSV file. Each row in the CSV file corresponds to an individual log entry, representing a singular event or state captured by the microservice’s logging system. And the format of the CSV file is composed of the following columns: (log_id, timestamp, date, cmdb_id, value). 
 
 | log_id   | timestamp   | date   | cmdb_id   | message   |
 | ----------- | -------   | -------   | -------   | -------   |
